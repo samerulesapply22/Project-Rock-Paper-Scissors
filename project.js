@@ -1,21 +1,25 @@
 function choice() {
     let choice = ["rock", "paper", "scissors"];
     let x = Math.floor(Math.random() * 3);
-    return choice[x]
+    return choice[x];
 }
 
 function round(player, computer) {
-    if (player == computer){
-            return("Tie!");
+    if (player == computer) {
+        result.textContent = "Tie!"; 
     } else if ((player == "rock" && computer == "scissors") || (player == "paper" && computer == "rock") || (player == "scissors" && computer == "paper")) {
-        return("You win!!");
+        result.textContent = "You win!!";
     } else {
-        return("You lose.");
-    }        
-}   
+        result.textContent = "You lose.";
+    } 
+}  
 
-for (let i = 0; i < 5; i++) {
-    player = prompt("Rock, Paper or Scissors?...");
-    computer = choice();
-    console.log(round(player.toLowerCase(), computer))
-}
+
+let result = document.querySelector("#result");
+const rock_button = document.querySelector("#rock");
+const paper_button = document.querySelector("#paper");
+const scissors_button = document.querySelector("#scissors");
+
+rock_button.addEventListener("click", () => round("rock", choice()));
+paper_button.addEventListener("click", () => round("paper", choice()));
+scissors_button.addEventListener("click", () => round("scissors", choice()));

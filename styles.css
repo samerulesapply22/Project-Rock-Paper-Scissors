@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#buttons-and-scores {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    background-color: rgba(194, 23, 32, 0.733);
+}
+
+button {
+    width: 200px;
+    color: white;
+    background-color: rgba(194, 23, 32, 0.733);;
+    padding: 20px;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 320px;
+    padding: 100px 50px;
+
+}
+
+#score {
+    color: white;
+    font-size: 18px;
+    padding-right: 60px;
+}
+
+
